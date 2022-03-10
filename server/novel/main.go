@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/t6tg/grpc-poc/server/novelpb"
+	"github.com/t6tg/grpc-poc/server/novel/novelpb"
 
 	"google.golang.org/grpc"
 )

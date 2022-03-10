@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package store;
+
+
+option go_package = "./storepb";
+
+service Store {
+    rpc GetStoreLatest (StoreLatestRequest) returns (StoreLatestResponse) {};
+}
+
+message StoreLatestRequest {} 
+
+message StoreLatestResponse {
+    repeated StoreLatests StoreLatests = 1;
+}
+
+message StoreLatests {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    int32 coin = 4;
+}
