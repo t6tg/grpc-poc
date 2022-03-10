@@ -21,8 +21,8 @@ func main() {
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
 	novelpb.RegisterNovelServer(grpcServer, newServer())
+	fmt.Println("novel service start at port 3000 ( grpc ) .... ")
 	grpcServer.Serve(lis)
-
 }
 
 func newServer() novelpb.NovelServer {
