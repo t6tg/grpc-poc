@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package novel;
+
+
+option go_package = "./novelpb";
+
+service Novel {
+    rpc GetNovelById (NovelIdRequest) returns (NovelIdResponse) {};
+}
+
+message NovelIdRequest {
+    int32 id = 1;
+} 
+
+message NovelIdResponse {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+}
